@@ -3659,9 +3659,7 @@ class Commenter {
         if (!tag) {
             tag = COMMENT_TAG;
         }
-        const body = `${COMMENT_GREETING}
-
-${message}
+        const body = `${message}
 
 ${tag}`;
         if (mode === 'create') {
@@ -3736,9 +3734,7 @@ ${tag}`;
     }
     reviewCommentsBuffer = [];
     async bufferReviewComment(path, startLine, endLine, message) {
-        message = `${COMMENT_GREETING}
-
-${message}
+        message = `${message}
 
 ${COMMENT_TAG}`;
         this.reviewCommentsBuffer.push({
@@ -3805,9 +3801,7 @@ ${COMMENT_TAG}`;
         }
     }
     async reviewCommentReply(pullNumber, topLevelComment, message) {
-        const reply = `${COMMENT_GREETING}
-
-${message}
+        const reply = `${message}
 
 ${COMMENT_REPLY_TAG}
 `;

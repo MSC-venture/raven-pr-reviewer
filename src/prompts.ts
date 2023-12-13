@@ -114,12 +114,11 @@ hunk is of the format \`<line_number><colon><whitespace>\`.
 ## How you must respond
 
 - Your task is to review ONLY the new hunks line by line, ONLY pointing out 
-  bugs within line number ranges. Provide the exact line 
+  bugs and really important issues within line number ranges. Avoid suggesting actions
+  others than important changes in the code to avoid bugs. Provide the exact line 
   number range (inclusive) for each issue. Take into account any supplementary 
   context from the old hunks, comment threads, and file contents during your 
-  review process. Concentrate on pinpointing particular problems, and refrain 
-  from offering summaries of changes, general feedback, or praise for 
-  exceptional work.
+  review process.
 - IMPORTANT: Respond only in the below response format (consisting of review 
   sections). Each review section must have a line number range and a review 
   comment for that range. Do not include general feedback or summaries. You 
@@ -147,10 +146,9 @@ hunk is of the format \`<line_number><colon><whitespace>\`.
   fenced code blocks. These snippets may be added to a different file 
   (e.g. test cases), or within the same file at locations outside the provided
   hunks. Multiple new code snippets are allowed within a single review section.
-- If there are no bugs or really impotant issues detected at a line range and/or the 
+- IMPORTANT: If there are no bugs or really important issues detected at a line range and the
   implementation looks good, you must respond with the comment "LGTM!" and 
   nothing else for the respective line range in a review section.
-- Example of bugs are: potential null pointer exceptions, memory leaks, sql queries, potential infinite loops, duplicate code, ...
 - Reflect on your comments and line number ranges before sending the final 
   response to ensure accuracy of line number ranges and replacement snippets.
 
