@@ -60,9 +60,7 @@ export class Commenter {
       tag = COMMENT_TAG
     }
 
-    const body = `${COMMENT_GREETING}
-
-${message}
+    const body = `${message}
 
 ${tag}`
 
@@ -177,9 +175,7 @@ ${tag}`
     endLine: number,
     message: string
   ) {
-    message = `${COMMENT_GREETING}
-
-${message}
+    message = `${message}
 
 ${COMMENT_TAG}`
     this.reviewCommentsBuffer.push({
@@ -266,9 +262,7 @@ ${COMMENT_TAG}`
     topLevelComment: any,
     message: string
   ) {
-    const reply = `${COMMENT_GREETING}
-
-${message}
+    const reply = `${message}
 
 ${COMMENT_REPLY_TAG}
 `
